@@ -10,6 +10,6 @@ jobs:
       - name: checking out to repo
         uses: actions/checkout@v4
       - name: SSH setup
-        uses: ".github/actions/ssh_action.yml"
+        uses: ./.github/actions
         with:
           private_key: ${{ secrets.SSH_KEY }}
