@@ -1,0 +1,13 @@
+name: Temp pipeline
+
+on:
+  push:
+
+jobs:
+  temp-job:
+    runs-on: ${{ vars.RUNNER_TAG }}
+    steps:
+      - name: SSH setup
+        uses: ".github/actions/ssh_action.yml"
+        with:
+          private_key: ${{ secrets.SSH_KEY }}
