@@ -7,6 +7,8 @@ jobs:
   temp-job:
     runs-on: ${{ vars.RUNNER_TAG }}
     steps:
+      - name: checking out to repo
+        uses: actions/checkout@v4
       - name: SSH setup
         uses: ./.github/actions
         with:
